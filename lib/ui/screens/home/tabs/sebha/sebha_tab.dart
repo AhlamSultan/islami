@@ -39,7 +39,7 @@ class _SebhaTabState extends State<SebhaTab> {
                     top: MediaQuery.of(context).size.height*0.12,
                   ),
                   child: AnimatedRotation(
-                    duration:const Duration(milliseconds: 200) ,
+                    duration:const Duration(milliseconds: 300) ,
                   turns: turn,
                   child: Image.asset("assets/images/body_sebha_logo.png")),
                 ),
