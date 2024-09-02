@@ -5,7 +5,7 @@ import 'package:islami_sun_c10/ui/screens/home/tabs/radio/radio_tab.dart';
 import 'package:islami_sun_c10/ui/screens/home/tabs/sebha/sebha_tab.dart';
 import 'package:islami_sun_c10/ui/screens/home/tabs/settings/settings_tab.dart';
 import 'package:islami_sun_c10/ui/utils/app_assets.dart';
-import 'package:islami_sun_c10/ui/utils/app_colors.dart';
+
 
 import '../../utils/app_localization_utils.dart';
 import '../../widgets/app_scaffold.dart';
@@ -20,13 +20,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int currentTabIndex = 4;
-  List<Widget> tabs = [
+  int currentTabIndex = 0;
+  List<Widget> tabs = <Widget>[
     QuranTab(),
-    AhadethTab(),
+    const AhadethTab(),
     SebhaTab(),
-    RadioTab(),
-    SettingsTab()
+    const RadioTab(),
+    const SettingsTab()
   ];
   @override
   Widget build(BuildContext context) {
