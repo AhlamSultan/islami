@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_sun_c10/ui/screens/home/home_screen.dart';
 import 'package:islami_sun_c10/ui/utils/app_assets.dart';
-import 'package:islami_sun_c10/ui/utils/app_theme.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String routeName = "Splash screen";
@@ -16,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 2), (){
+    Future.delayed(const Duration(seconds: 2), (){
       Navigator.pushReplacementNamed(context, HomeScreen.routeName);
     });
 

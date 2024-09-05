@@ -11,11 +11,16 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_sun_c10/ui/utils/app_theme.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  LanguageProvider langProvider = LanguageProvider();
+  await langProvider.getLang();
+  ThemeProvider theProvider = ThemeProvider();
+  await theProvider.getTheme();
   runApp(MultiProvider(
        providers: [
-         ChangeNotifierProvider (create: (_) => LanguageProvider()),
-         ChangeNotifierProvider(create: (_) => ThemeProvider())
+         ChangeNotifierProvider (create: (_) => langProvider),
+         ChangeNotifierProvider(create: (_) => theProvider),
        ],
       child: const MyApp()));
 }

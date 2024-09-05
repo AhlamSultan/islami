@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islami_sun_c10/ui/providers/theme_provider.dart';
-import 'package:islami_sun_c10/ui/utils/app_assets.dart';
-import 'package:islami_sun_c10/ui/utils/app_colors.dart';
 import 'package:provider/provider.dart';
 
-import '../utils/app_theme.dart';
+
 
 class AppScaffold extends StatelessWidget {
   final String title;
@@ -30,6 +28,6 @@ class AppScaffold extends StatelessWidget {
         bottomNavigationBar: bottomNavigation,
         body: body,
       ),
-    );;
+    );
   }
 }

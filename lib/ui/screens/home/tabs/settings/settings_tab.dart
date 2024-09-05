@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:islami_sun_c10/ui/providers/language_provider.dart';
 import 'package:islami_sun_c10/ui/providers/theme_provider.dart';
 import 'package:islami_sun_c10/ui/utils/app_localization_utils.dart';
-import 'package:islami_sun_c10/ui/utils/app_theme.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class SettingsTab extends StatefulWidget {
@@ -55,8 +53,8 @@ class _SettingsTabState extends State<SettingsTab> {
   Widget buildThemeSwitchRow() {
     return Row(
       children: [
-        Text("Dark Theme"),
-        Spacer(),
+        const Text("Dark Theme"),
+        const Spacer(),
         Switch(value: themeProvider.currentThemeMode == ThemeMode.dark, onChanged: (newValue){
           themeProvider.toggleTheme(newValue);
         })
